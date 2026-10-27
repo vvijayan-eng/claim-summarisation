@@ -12,6 +12,7 @@ These synthetic documents are pre-formatted for testing the **ClaimAssure AI** i
 | **`02_Certified_Collision_Repair_Estimate.txt`** | **Repair Estimate** | High-fidelity itemized estimate from certified shop. Reconciles parts ($4,850), labor ($2,482), and grand total ($7,850). Passes `VAL-AMT-001`. |
 | **`03_Government_Driver_License_ID_Proof.txt`** | **ID Proof** | Valid State Driver's License. Fulfills KYC/AML mandatory identity criteria. Resolves `VAL-DOC-001` missing ID alerts. |
 | **`04_Suspicious_Invoice_Test_Case.txt`** | **Invoice** | **Adversarial / Fraud Test Case.** Deliberately triggers: <br>• **`VAL-DATE-003`**: Invoice dated 2025-11-20 (predates loss on 2026-01-12). <br>• **`VAL-AMT-001`**: $16,850 billed vs $7,850 claimed (+114% variance). <br>• **`FRD-EDIT-02`**: Digital modification / Photoshop tag anomaly. |
+| **`high_risk_document.txt`** | **Invoice / Repair Estimate** | **CRITICAL HIGH-RISK REJECTION CASE.** <br>• **Triggers Immediate Rejection / SIU Escalation** <br>• **Date Predates Loss by 116 Days** (`VAL-DATE-003`) <br>• **+522% Inflated Demand ($48,900 vs $7,850)** (`VAL-AMT-001` & `FRD-AMT-05`) <br>• **Identity Mismatch** (Viktor K. Vance-Sloan vs Eleanor Vance) <br>• **Contradictory Narrative** (Parked driveway vs 65 mph street race rollover) (`FRD-NARR-03`) <br>• **Tampered Layered Artifact** (`FRD-EDIT-02`). |
 
 ---
 

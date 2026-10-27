@@ -1,0 +1,65 @@
+================================================================================
+                    CRITICAL HIGH-RISK FORENSIC ALERT FILE
+                     DEMAND FOR INDEMNIFICATION & INVOICE
+================================================================================
+FILE NAME: high_risk_document.txt
+METADATA ARTIFACT TAG: [SUSPICIOUS_PHOTOSHOP_EDIT_LAYERED_COPY_OF_ESTIMATE_V3]
+FILE REVISION CLASSIFICATION: ANOMALOUS DIGITAL TAMPERING DETECTED
+
+POLICY & CLAIM CROSS-REFERENCE:
+--------------------------------------------------------------------------------
+CLAIM NUMBER: CLM-2026-01000
+POLICY NUMBER: PA-AUTO-94821
+REGISTERED INSURED ON POLICY: Eleanor Vance
+UNAUTHORIZED CLAIMANT ON INVOICE: Viktor K. Vance-Sloan (NO ENDORSEMENT ON FILE)
+SUBMITTED VEHICLE VIN: 1HGCR2F83HA094821 (VIN Cloned / Multiple Claim Hits)
+
+CRITICAL TIMELINE & DATE INCONSISTENCY (VAL-DATE-003):
+--------------------------------------------------------------------------------
+REPORTED COLLISION DATE: 2026-01-12
+INVOICE & SERVICE RENDERED DATE: 2025-09-18 (116 DAYS BEFORE CASUALTY OCCURRED!)
+* Forensic Notice: Repairs and replacement components claim to have been completed
+  nearly 4 months prior to the date the accident actually occurred.
+
+INFLATED DEMAND & FINANCIAL DISCREPANCY (VAL-AMT-001 & FRD-AMT-05):
+--------------------------------------------------------------------------------
+ORIGINAL POLICY ESTIMATED LOSS: $ 7,850.00
+FRAUDULENT BILLED INVOICE DEMAND: $ 48,900.00 (+522% UNEXPLAINED VARIANCE)
+
+ITEMIZED CHARGES:
+  Line 01: Complete Engine Block & Turbo Replacement      $ 19,500.00
+  Line 02: Full Carbon Fiber Monocoque Replacement        $ 14,800.00
+  Line 03: Speculative "Future Diminished Value Fee"       $  8,200.00
+  Line 04: Emergency Towing Surcharge (Unlicensed Vendor)  $  3,400.00
+  Line 05: Hazardous Materials Environmental Disposal     $  3,000.00
+--------------------------------------------------------------------------------
+TOTAL FRAUDULENT DEMAND:                                  $ 48,900.00
+--------------------------------------------------------------------------------
+
+CONFLICTING ACCIDENT NARRATIVE (FRD-NARR-03):
+--------------------------------------------------------------------------------
+INSURED'S CLAIM STATEMENT:
+"Vehicle was parked stationary and unoccupied on residential driveway when struck."
+
+ATTACHED SERVICE REPORT NARRATIVE:
+"Vehicle sustained violent rollover collision at 65 mph during highway street race;
+severe front-end impact into concrete retaining barrier while in motion."
+
+FORENSIC FRAUD TRIGGERS DETECTED:
+--------------------------------------------------------------------------------
+1. [FRD-EDIT-02] Digital Revision Flag: High-entropy font mismatch & raster artifacts.
+2. [VAL-DATE-003] Invoice predates the casualty loss event by 116 days.
+3. [VAL-AMT-001] $48,900.00 billed vs $7,850.00 legitimate estimate (+522% inflation).
+4. [VAL-ID-001] Unauthorized third-party name on invoice (Identity mismatch).
+5. [FRD-NARR-03] Direct contradiction: Parked driveway vs 65 mph highway rollover.
+
+RECOMMENDED ADJUSTER ACTION:
+--------------------------------------------------------------------------------
+>>> REJECT CLAIM IMMEDIATELY <<<
+- Issue formal Notice of Claim Denial citing misrepresentation and lack of insurable interest.
+- Escalate complete digital file to Special Investigation Unit (SIU) and State Insurance Fraud Bureau.
+- Place immediate disbursement freeze on Policy #PA-AUTO-94821.
+
+================================================================================
+SYNTHETIC TEST DATA - DESIGNED SPECIFICALLY TO TRIGGER REJECTION & SIU AUDIT
+================================================================================

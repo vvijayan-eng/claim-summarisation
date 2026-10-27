@@ -102,18 +102,18 @@ class ClaimAddNotes(BaseModel):
 class ClaimOut(ClaimBase):
     id: int
     claim_number: str
-    claim_filed_date: datetime
+    claim_filed_date: Optional[datetime] = None
     status: str
-    risk_level: str
-    fraud_score: float
+    risk_level: str = "Low"
+    fraud_score: float = 0.0
     ai_summary: Optional[Dict[str, Any]] = None
-    ai_processing_time_sec: float
-    adjuster_review_time_sec: float
+    ai_processing_time_sec: Optional[float] = 0.0
+    adjuster_review_time_sec: Optional[float] = 0.0
     assigned_adjuster: Optional[str] = None
     adjuster_notes: Optional[str] = None
-    is_synthetic: bool
-    created_at: datetime
-    updated_at: datetime
+    is_synthetic: Optional[bool] = True
+    created_at: Optional[datetime] = None
+    updated_at: Optional[datetime] = None
     documents: List[DocumentOut] = []
     validation_results: List[ValidationResultOut] = []
     fraud_indicators: List[FraudIndicatorOut] = []

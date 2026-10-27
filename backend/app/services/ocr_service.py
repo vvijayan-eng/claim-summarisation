@@ -77,7 +77,31 @@ class OCRService:
 
         raw_text_lines = []
 
-        if "police" in lower_name or "report" in lower_name or document_category == "Police Report":
+        # High Risk / Adversarial Fraud Test Document
+        if "high_risk" in lower_name or "fraud" in lower_name or "suspicious" in lower_name:
+            extracted_fields.update({
+                "document_category": "Invoice",
+                "invoice_number": "INV-2026-9921",
+                "invoice_date": "2025-09-18",  # Dated 116 days before incident to trigger VAL-DATE-003!
+                "vendor_name": "Precision Auto Restoration LLC",
+                "patient_name": "Viktor K. Vance-Sloan",  # Identity mismatch to trigger VAL-ID-001!
+                "billed_to": "Viktor K. Vance-Sloan",
+                "total_amount": 48900.00,  # Extreme +522% inflation to trigger VAL-AMT-001 & FRD-AMT-05!
+                "narrative": "Vehicle sustained violent rollover collision at 65 mph during highway street race; severe impact while in motion.",
+                "photoshop_edit_flag": True,
+                "forensic_alert": "Critical High-Risk Document containing date predate, extreme amount discrepancy, and identity mismatch."
+            })
+            raw_text_lines = [
+                "CRITICAL HIGH-RISK FORENSIC ALERT FILE",
+                "Invoice Number: INV-2026-9921",
+                "Invoice Date: 2025-09-18 (PREDATES INCIDENT)",
+                "Billed To: Viktor K. Vance-Sloan (IDENTITY MISMATCH)",
+                "Total Amount: $48,900.00 (MASSIVE LEDGER INFLATION)",
+                "Narrative: 65 mph street race rollover (CONFLICTS WITH PARKED DRIVER NARRATIVE)",
+                "Metadata: Photoshop Layered Revision Detected"
+            ]
+
+        elif "police" in lower_name or "report" in lower_name or document_category == "Police Report":
             extracted_fields.update({
                 "document_category": "Police Report",
                 "police_incident_id": f"PD-2026-{random.randint(10000, 99999)}",

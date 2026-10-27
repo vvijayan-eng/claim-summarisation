@@ -39,6 +39,7 @@ export const ClaimIntake: React.FC = () => {
   const [files, setFiles] = useState<File[]>([]);
   const [isUploading, setIsUploading] = useState<boolean>(false);
   const [uploadSuccess, setUploadSuccess] = useState<boolean>(false);
+  const [uploadError, setUploadError] = useState<string | null>(null);
 
   // New Claim Form State (if creating from intake)
   const [newPolicyNum, setNewPolicyNum] = useState<string>('PA-AUTO-99820');
@@ -103,15 +104,26 @@ export const ClaimIntake: React.FC = () => {
       await claimsApi.generateSummary(targetClaimId);
 
       setUploadSuccess(true);
+      setUploadError(null);
       await fetchClaims();
       await selectClaim(targetClaimId);
 
       setTimeout(() => {
         navigate('/workbench');
       }, 1200);
-    } catch (err) {
+    } catch (err: any) {
       console.error('Upload processing failed:', err);
-      alert('Document ingestion pipeline encountered an error. Check console.');
+      let errMsg = 'Document ingestion pipeline encountered an error.';
+      if (err.code === 'ERR_NETWORK' || !err.response) {
+        errMsg = 'Backend server unreachable at http://127.0.0.1:8000. Please ensure the FastAPI backend is running (run .\\start.bat or python in the backend folder).';
+      } else if (err.response?.data?.detail) {
+        errMsg = typeof err.response.data.detail === 'object' 
+          ? JSON.stringify(err.response.data.detail) 
+          : err.response.data.detail;
+      } else if (err.message) {
+        errMsg = err.message;
+      }
+      setUploadError(errMsg);
     } finally {
       setIsUploading(false);
     }
@@ -131,6 +143,12 @@ export const ClaimIntake: React.FC = () => {
       {uploadSuccess && (
         <Alert severity="success" sx={{ mb: 3, borderRadius: 2 }}>
           Documents successfully extracted via Azure OCR! Validation rules and AI summary generated. Redirecting to Claim Workbench...
+        </Alert>
+      )}
+
+      {uploadError && (
+        <Alert severity="error" sx={{ mb: 3, borderRadius: 2 }}>
+          <strong>Upload & Processing Error:</strong> {uploadError}
         </Alert>
       )}
 

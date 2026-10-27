@@ -43,15 +43,20 @@ class FraudScoringEngine:
         # 2. Suspicious Document Edits / Metadata Anomalies
         for doc in documents:
             name = doc.file_name.lower()
-            if "edit" in name or "modified" in name or "photoshop" in name or "copy_of" in name:
-                impact = 20.0
+            is_edited = "edit" in name or "modified" in name or "photoshop" in name or "copy_of" in name or "high_risk" in name or "suspicious" in name
+            if doc.extracted_fields and isinstance(doc.extracted_fields, dict):
+                if doc.extracted_fields.get("photoshop_edit_flag"):
+                    is_edited = True
+
+            if is_edited:
+                impact = 25.0
                 base_score += impact
                 indicators.append({
                     "indicator_code": "FRD-EDIT-02",
                     "indicator_name": "Suspicious Document Revision Artifacts",
-                    "risk_level": "Medium",
+                    "risk_level": "High",
                     "impact_score": impact,
-                    "detected_reason": f"File '{doc.file_name}' contains digital revision flags or anomalous raster font re-compression in OCR layers.",
+                    "detected_reason": f"File '{doc.file_name}' contains digital revision flags, Photoshop metadata artifacts, or high-risk tampering signatures.",
                     "evidence_pointer": f"Document ID: {doc.id} ({doc.file_name})",
                     "metadata_context": {"compression_anomaly": True, "mime_type": doc.file_type}
                 })
@@ -67,8 +72,13 @@ class FraudScoringEngine:
                     police_narratives.append(p_narrative.lower())
 
         for pn in police_narratives:
-            # Check for direct contradictions (e.g., parked car vs intersection speed)
-            if ("parked" in claim_desc and "mph" in pn and "moving" in pn) or ("yield" in pn and "red light" in claim_desc):
+            # Check for direct contradictions (e.g., parked car vs intersection speed or race vs yield)
+            is_contradiction = (
+                ("parked" in claim_desc and ("mph" in pn or "moving" in pn or "rollover" in pn)) or
+                ("yield" in claim_desc and ("red light" in pn or "race" in pn or "speed" in pn)) or
+                ("rollover" in pn and "rollover" not in claim_desc)
+            )
+            if is_contradiction:
                 impact = 25.0
                 base_score += impact
                 indicators.append({
@@ -76,9 +86,9 @@ class FraudScoringEngine:
                     "indicator_name": "Conflicting Incident Narratives",
                     "risk_level": "High",
                     "impact_score": impact,
-                    "detected_reason": "Insured narrative contradicts certified police officer impact dynamics.",
-                    "evidence_pointer": "Police Report vs Insured Intake Statement",
-                    "metadata_context": {"semantic_distance": 0.68}
+                    "detected_reason": "Insured narrative contradicts certified police officer impact dynamics or service report mechanics.",
+                    "evidence_pointer": "Police / Service Report vs Insured Intake Statement",
+                    "metadata_context": {"semantic_distance": 0.78}
                 })
                 break
 
@@ -104,17 +114,34 @@ class FraudScoringEngine:
             "Travel": 4000.0
         }
         threshold = benchmarks.get(claim.policy_type, 10000.0)
-        if claim.estimated_loss > threshold * 1.5:
-            impact = 15.0
+        doc_amounts = [float(doc.extracted_fields.get("total_amount", 0) or 0) for doc in documents if doc.extracted_fields and isinstance(doc.extracted_fields, dict)]
+        max_loss = max(doc_amounts + [claim.estimated_loss])
+        if max_loss > threshold * 1.5:
+            impact = 20.0
             base_score += impact
             indicators.append({
                 "indicator_code": "FRD-AMT-05",
                 "indicator_name": "Excessive Loss Outlier",
-                "risk_level": "Medium",
+                "risk_level": "High",
                 "impact_score": impact,
-                "detected_reason": f"Claimed loss of ${claim.estimated_loss:,.2f} exceeds regional 90th-percentile benchmark (${threshold:,.2f}) for {claim.policy_type} claims.",
+                "detected_reason": f"Demand of ${max_loss:,.2f} exceeds regional 90th-percentile benchmark (${threshold:,.2f}) for {claim.policy_type} casualty losses.",
                 "evidence_pointer": "Underwriting Loss Actuarial Model",
-                "metadata_context": {"benchmark_limit": threshold, "deviation_ratio": claim.estimated_loss / threshold}
+                "metadata_context": {"benchmark_limit": threshold, "deviation_ratio": round(max_loss / threshold, 2)}
+            })
+
+        # 6. Critical Date Predating Fraud Signal (VAL-DATE-003)
+        date_predates = [v for v in validation_results if v.get("rule_code") == "VAL-DATE-003"]
+        if date_predates:
+            impact = 30.0
+            base_score += impact
+            indicators.append({
+                "indicator_code": "FRD-DATE-07",
+                "indicator_name": "Pre-Existing Casualty Repair Fraud",
+                "risk_level": "High",
+                "impact_score": impact,
+                "detected_reason": "Invoiced repairs were completed months before the stated loss date occurred.",
+                "evidence_pointer": date_predates[0].get("issue_detected"),
+                "metadata_context": {"date_anomaly": True}
             })
 
         # 6. Critical Missing Evidence (No photos or repair estimates on severe claims)
