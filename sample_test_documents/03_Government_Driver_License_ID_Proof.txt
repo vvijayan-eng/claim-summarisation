@@ -1,0 +1,32 @@
+================================================================================
+           NEW YORK STATE DEPARTMENT OF MOTOR VEHICLES (DMV)
+              DRIVER LICENSE & CREDENTIAL RECORD VERIFICATION
+================================================================================
+DOCUMENT TYPE: Driver License (Class D - Operator)
+LICENSE ID NUMBER: DL-94821039
+REAL ID COMPLIANT: YES (Gold Star Verified)
+
+CARDHOLDER DETAILS:
+--------------------------------------------------------------------------------
+Full Legal Name: Eleanor Vance
+Residential Address: 742 Evergreen Terrace, Apt 4B, White Plains, NY 10601
+Date of Birth: 1988-04-14
+Gender: F                          Height: 5'-07"
+Eyes: Hazel                        Organ Donor: Yes
+
+STATUS & VALIDITY:
+--------------------------------------------------------------------------------
+Issue Date: 2021-08-15
+Expiration Date: 2029-08-15
+Status: ACTIVE / IN GOOD STANDING
+Restrictions: None
+Endorsements: None
+
+FACIAL RECOGNITION & BIOMETRIC CONFIRMATION:
+Biometric Signature Hash: SHA256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934
+Digital Photo Record: VERIFIED ON FILE
+Audit Tracking Number: NY-DMV-AUD-2026-90412
+
+================================================================================
+SYNTHETIC TEST DATA - FOR TESTING & COMPLIANCE DEMONSTRATION PURPOSES ONLY
+================================================================================

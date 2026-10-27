@@ -1,0 +1,33 @@
+================================================================================
+             TAX INVOICE & DEMAND FOR PAYMENT - COLLISION RESTORATION
+              PRECISION AUTO RESTORATION & GLASS SOLUTIONS LLC
+================================================================================
+INVOICE NUMBER: INV-2026-9921                  INVOICE DATE: 2025-11-20
+BILLED TO: Eleanor Vance                       PAYMENT TERMS: Due Upon Receipt
+INSURANCE CLAIM: CLM-2026-01000                POLICY: PA-AUTO-94821
+VEHICLE: 2023 Honda Accord Sedan EX-L          FILE TAG: Photoshop_Modified_V2.pdf
+
+ITEMIZED CHARGES:
+--------------------------------------------------------------------------------
+LINE  DESCRIPTION                                                 AMOUNT ($)
+--------------------------------------------------------------------------------
+01    Emergency Tow & Vehicle Recovery Service                    $ 1,250.00
+02    Vehicle Secure Storage (45 Days @ $120.00/day)              $ 5,400.00
+03    Full Transmission Replacement (Remanufactured OEM)          $ 6,800.00
+04    Paint Blend & Clear Coat Application                        $ 2,200.00
+05    Hazardous Fluid Clean-Up Fee                                $ 1,200.00
+--------------------------------------------------------------------------------
+TOTAL AMOUNT BILLED:                                             $16,850.00
+--------------------------------------------------------------------------------
+
+[NOTE TO ADJUSTER / COMPLIANCE ENGINE]:
+- Notice: Invoice Date is 2025-11-20 (53 days BEFORE the collision on 2026-01-12).
+- Billed Total ($16,850.00) exceeds certified repair estimate ($7,850.00) by +114%.
+- Transmission replacement was not noted on police report impact narrative.
+- Intended to trigger VAL-DATE-003, VAL-AMT-001, and FRD-EDIT-02.
+
+AUTHORIZED BY:
+Precision Solutions Billing Department
+================================================================================
+SYNTHETIC TEST DATA - FOR TESTING & COMPLIANCE DEMONSTRATION PURPOSES ONLY
+================================================================================

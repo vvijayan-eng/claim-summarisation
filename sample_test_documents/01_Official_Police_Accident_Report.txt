@@ -1,0 +1,47 @@
+================================================================================
+                      OFFICIAL POLICE ACCIDENT REPORT
+                   METROPOLITAN POLICE DEPARTMENT - REGION 4
+================================================================================
+REPORT NUMBER: PD-2026-89412                  DISPATCH CAD: CAD-99120-X
+INCIDENT DATE: 2026-01-12                     TIME OF INCIDENT: 14:25 EST
+PRECINCT: 14th District Traffic Enforcement   OFFICER BADGE: #448 (Sgt. M. Ramos)
+
+LOCATION OF OCCURRENCE:
+Intersection of Elm Street & 5th Avenue, White Plains, NY 10601
+Road Surface: Asphalt / Dry                   Weather: Clear / Daylight (48°F)
+Speed Limit: 30 MPH                           Traffic Control: Signal Operating
+
+PARTIES & VEHICLES INVOLVED:
+--------------------------------------------------------------------------------
+UNIT 1 (Primary Insured Vehicle):
+  Driver Name: Eleanor Vance
+  Date of Birth: 1988-04-14                   Driver License: DL-NY-94821039
+  Vehicle: 2023 Honda Accord Sedan EX-L       Color: Silver Metallic
+  Plate: NY-KL8-941                           VIN: 1HGCR2F83HA094821
+  Insurance Carrier: Premier Casualty Ins.    Policy Number: PA-AUTO-94821
+  Damage Area: Front Right Quarter & Bumper   Estimated Severity: Severe ($7k+)
+  Towed By: Metro Heavy Duty Towing Service   Drivable: No (Fluid leakage)
+
+UNIT 2 (Third-Party Vehicle):
+  Driver Name: David Miller
+  Driver License: DL-CT-44019281              Vehicle: 2019 Ford F-150 Pickup
+  Insurance Carrier: Nationwide Commercial    Policy Number: NC-COMM-33910
+
+OFFICER NARRATIVE & IMPACT DYNAMICS:
+--------------------------------------------------------------------------------
+Unit 1 (Vance) was lawfully decelerating while navigating the marked intersection
+traffic circle on Elm Street. Unit 2 (Miller) failed to maintain safe braking
+distance on approach and collided with the passenger front quarter panel and
+wheel assembly of Unit 1 at approximately 24 MPH.
+
+Impact caused structural displacement of the passenger front fender, suspension
+tie-rod fracture, and deployment of passenger side curtain airbags.
+Both drivers were wearing functional three-point seat restraints.
+No citations issued at scene; Unit 2 driver acknowledged distracted braking.
+
+OFFICIAL SIGNATURE:
+Sgt. M. Ramos, Shield #448, 14th District
+Metropolitan Police Dept. [OFFICIAL SEAL RECORDED]
+================================================================================
+SYNTHETIC TEST DATA - FOR TESTING & COMPLIANCE DEMONSTRATION PURPOSES ONLY
+================================================================================

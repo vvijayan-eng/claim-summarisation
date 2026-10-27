@@ -1,0 +1,50 @@
+================================================================================
+                    APEX CERTIFIED COLLISION & REPAIR CENTER
+               ASE Master Collision Repairer • I-CAR Platinum Facility
+               4120 Industrial Boulevard, White Plains, NY 10603
+               Phone: (914) 555-0199 • Tax ID: XX-XXX4190
+================================================================================
+ESTIMATE NUMBER: EST-2026-44910                ESTIMATE DATE: 2026-01-15
+CUSTOMER NAME: Eleanor Vance                   CLAIM NUMBER: CLM-2026-01000
+POLICY NUMBER: PA-AUTO-94821                   VEHICLE VIN: 1HGCR2F83HA094821
+MAKE / MODEL: 2023 Honda Accord Sedan EX-L     ODOMETER: 24,310 Miles
+EXTERIOR COLOR: Lunar Silver Metallic (NH830M) CERTIFIED APPRAISER: Kevin Vance (#48)
+
+LINE ITEM DAMAGE APPRAISAL:
+--------------------------------------------------------------------------------
+LINE  OPERATION  DESCRIPTION                         PARTS ($)    LABOR (HRS)
+--------------------------------------------------------------------------------
+01    REPLACE    Front Bumper Cover Assembly OEM     $ 685.00        2.4 hrs
+02    REPLACE    RH Front Fender Panel OEM           $ 450.00        2.8 hrs
+03    REPLACE    RH LED Headlamp Unit Assembly       $ 920.00        1.0 hrs
+04    REPLACE    RH Suspension Lower Control Arm     $ 340.00        3.5 hrs
+05    REPLACE    RH Front Strut & Steering Knuckle   $ 580.00        2.5 hrs
+06    REPAIR     Front Subframe / Unibody Pull (4h)  $   0.00        4.0 hrs
+07    REPLACE    Passenger Curtain Airbag Module     $1,150.00       3.0 hrs
+08    REPLACE    Side Impact Crash Sensor Module     $ 210.00        1.0 hrs
+09    REFINISH   Paint Front Bumper & Blend Fender   $ 360.00        7.5 hrs
+10    SUBLET     Four-Wheel Computerized Alignment   $ 155.00        1.5 hrs
+--------------------------------------------------------------------------------
+
+FINANCIAL BREAKDOWN:
+--------------------------------------------------------------------------------
+Total Parts (OEM Factory Authorized):                 $ 4,850.00
+Mechanical & Frame Labor (29.2 hrs @ $85.00/hr):      $ 2,482.00
+Refinish Paint Materials (Clearcoat/Basecoat):        $   360.00
+Hazardous Waste & Disposal Fee:                       $    35.00
+State Sales Tax (8.375%):                             $   123.00
+--------------------------------------------------------------------------------
+GRAND TOTAL ESTIMATE REPAIR COST:                     $ 7,850.00
+--------------------------------------------------------------------------------
+
+SUPPLEMENTARY NOTES:
+1. Frame pull required on Celette bench to restore subframe alignment tolerance.
+2. OEM parts verified per Honda Collision position statement.
+3. Pre-repair and post-repair diagnostic OBD-II scan completed.
+
+AUTHORIZED SIGNATURE:
+Kevin Vance, I-CAR Master Estimator #48
+Apex Certified Collision Center
+================================================================================
+SYNTHETIC TEST DATA - FOR TESTING & COMPLIANCE DEMONSTRATION PURPOSES ONLY
+================================================================================

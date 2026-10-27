@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meter Intelligence Platform — Executive Presentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: 11in 6.1875in; /* 16:9 Landscape ratio */
+      margin: 0;
+    }
+    :root {
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --card-alt: #F1F5F9;
+      --border: #E2E8F0;
+      --text-dark: #0F172A;
+      --text-muted: #475569;
+      --text-light: #64748B;
+      --primary: #2563EB;
+      --primary-dark: #1D4ED8;
+      --primary-light: #EFF6FF;
+      --emerald: #059669;
+      --emerald-light: #ECFDF5;
+      --amber: #D97706;
+      --amber-light: #FFFBEB;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #FFFFFF;
+      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .slide {
+      width: 11in;
+      height: 6.1875in;
+      background: var(--bg);
+      padding: 38px 46px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+    }
+    .slide-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .slide-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+      line-height: 1.25;
+    }
+    .slide-subtitle {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      max-width: 850px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      flex: 1;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      flex: 1;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-banner {
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 11.5px;
+      margin-bottom: 10px;
+      display: inline-block;
+      width: fit-content;
+    }
+    .badge-primary { background: var(--primary-light); color: var(--primary-dark); }
+    .badge-amber { background: var(--amber-light); color: var(--amber); }
+    .badge-emerald { background: var(--emerald-light); color: var(--emerald); }
+
+    .card h4 {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+    .card p {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+    .stat-number {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 3px;
+    }
+    .stat-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 3px;
+    }
+    .bullet-list {
+      margin-top: 8px;
+      list-style-type: none;
+    }
+    .bullet-list li {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 5px;
+      position: relative;
+      padding-left: 14px;
+      line-height: 1.4;
+    }
+    .bullet-list li::before {
+      content: "•";
+      color: var(--primary);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    .footer-bar {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border);
+      padding-top: 8px;
+      font-size: 10px;
+      color: var(--text-light);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SLIDE 1 -->
+  <div class="slide" style="background:#FFFFFF;">
+    <div style="height: 4px; background: var(--primary); width: 100%; position: absolute; top:0; left:0;"></div>
+    <div style="margin-top: 24px;">
+      <div class="slide-tag">EXECUTIVE BUSINESS CASE & PILOT PROPOSAL</div>
+      <h1 style="font-size: 34px; font-weight: 800; color: var(--text-dark); margin-bottom: 10px;">Meter Intelligence Platform</h1>
+      <h2 style="font-size: 17px; font-weight: 500; color: var(--text-muted); margin-bottom: 18px;">From Anomaly Detection to Confident Action: Unlocking Operational Lift and Revenue Protection</h2>
+      <p style="font-size: 13px; color: var(--text-muted); max-width: 760px; line-height: 1.5; margin-bottom: 30px;">
+        An explainable meter triage engine with automated evidence assembly, human-governed resolution, and rapid ROI for utility operations.
+      </p>
+      <div style="display: flex; gap: 16px;">
+        <div style="flex:1; background: var(--card-alt); border: 1px solid var(--border); padding: 14px 18px; border-radius: 8px;">
+          <div style="font-weight: 700; color: var(--primary-dark); font-size: 14px;">66% Triage Reduction</div>
+          <div style="font-size: 11.5px; color: var(--text-muted); margin-top: 3px;">Cuts manual investigation from 30 min to 10 min</div>
+        </div>
+        <div style="flex:1; background: var(--card-alt); border: 1px solid var(--border); padding: 14px 18px; border-radius: 8px;">
+          <div style="font-weight: 700; color: var(--emerald); font-size: 14px;">Avoided Truck Rolls</div>
+          <div style="font-size: 11.5px; color: var(--text-muted); margin-top: 3px;">Prevents costly non-fault field dispatches</div>
+        </div>
+        <div style="flex:1; background: var(--card-alt); border: 1px solid var(--border); padding: 14px 18px; border-radius: 8px;">
+          <div style="font-weight: 700; color: var(--text-dark); font-size: 14px;">100% Audit Compliance</div>
+          <div style="font-size: 11.5px; color: var(--text-muted); margin-top: 3px;">Transparent, human-supervised governance</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>Operational Intelligence Initiative</span>
+      <span>Slide 01 of 10</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 2 -->
+  <div class="slide">
+    <div class="slide-tag">01 / Executive Summary</div>
+    <div class="slide-title">Transforming Smart Meter Alert Spikes into Decisive Business Value</div>
+    <div class="slide-subtitle">Moving from unmanageable alert queues to automated, evidence-backed human review.</div>
+    <div class="grid-3">
+      <div class="card">
+        <span class="card-banner badge-amber">The Current Bottleneck</span>
+        <p>Operations teams face high volumes of raw meter flags with fragmented context. Analysts spend up to 30 minutes per ticket manually pulling history, weather, and billing records across legacy systems.</p>
+        <ul class="bullet-list" style="margin-top:auto;">
+          <li>30 min average triage time</li>
+          <li>Severe backlog and analyst fatigue</li>
+          <li>Wasteful false-alarm truck rolls</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="card-banner badge-primary">The Intelligence Solution</span>
+        <p>An automated screening and evidence collation platform. Synthesizes 90-day peer baselines and pre-populates actionable case dossiers in seconds—leaving final judgment to associates.</p>
+        <ul class="bullet-list" style="margin-top:auto;">
+          <li>3σ peer-slot baseline filter</li>
+          <li>Automated evidence assembly</li>
+          <li>100% human-governed decisions</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="card-banner badge-emerald">The Expected ROI</span>
+        <p>Returns ~333 operational hours per 1,000 cases, eliminates avoidable field dispatches ($150-$250/truck roll), accelerates dispute resolution, and secures unbilled revenue.</p>
+        <ul class="bullet-list" style="margin-top:auto;">
+          <li>66% triage efficiency gain</li>
+          <li>Capacity unlocked: ~333 hrs / 1k</li>
+          <li>Rapid 90-day pilot validation</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>Meter Intelligence Platform</span>
+      <span>Slide 02 of 10</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 3 -->
+  <div class="slide">
+    <div class="slide-tag">02 / Business Problem & Drivers</div>
+    <div class="slide-title">The High Cost of Inaction in Smart Meter Anomaly Handling</div>
+    <div class="slide-subtitle">Unfiltered meter signals create severe operational drag, unnecessary truck rolls, and billing exposure.</div>
+    <div class="grid-2">
+      <div class="card">
+        <h4>1. Operational Drag & Triage Fatigue</h4>
+        <div style="font-weight: 700; color: var(--primary); font-size: 12px; margin-bottom: 5px;">30+ minutes wasted per anomaly review</div>
+        <p>Analysts juggle 4-5 legacy portals (AMI data, CIS billing, CRM, weather) just to determine if a spike is legitimate or benign.</p>
+      </div>
+      <div class="card">
+        <h4>2. Avoidable Field Dispatches</h4>
+        <div style="font-weight: 700; color: var(--primary); font-size: 12px; margin-bottom: 5px;">$150 – $250 per wasted truck roll</div>
+        <p>Prematurely escalating unvalidated meter anomalies to field teams wastes substantial fleet budget on non-faulty meters.</p>
+      </div>
+      <div class="card">
+        <h4>3. Delayed Dispute & Billing Resolution</h4>
+        <div style="font-weight: 700; color: var(--primary); font-size: 12px; margin-bottom: 5px;">Customer friction & unbilled revenue</div>
+        <p>Undetected anomalies fester until monthly billing, generating high-friction customer complaints and ombudsman escalations.</p>
+      </div>
+      <div class="card">
+        <h4>4. Scalability Bottleneck</h4>
+        <div style="font-weight: 700; color: var(--primary); font-size: 12px; margin-bottom: 5px;">Alert volume outpaces headcount</div>
+        <p>As smart meter rollouts expand, manual investigation cannot scale linearly without ballooning back-office labor expenditure.</p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>Meter Intelligence Platform</span>
+      <span>Slide 03 of 10</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 4 -->
+  <div class="slide">
+    <div class="slide-tag">03 / Strategic Solution</div>
+    <div class="slide-title">An Explainable, Closed-Loop Intelligence Platform</div>
+    <div class="slide-subtitle">Automating raw data synthesis so operations teams make faster, higher-confidence decisions.</div>
+    <div class="grid-3">
+      <div class="card">
+        <span class="card-banner badge-primary">DETECT</span>
+        <h4>Transparent Screening</h4>
+        <p>Filters raw 4-hour telemetry using a 90-day same-slot peer baseline (mean + 3σ). Eliminates seasonal and time-of-day bias before alerts enter the queue.</p>
+        <ul class="bullet-list" style="margin-top:auto;">
+          <li>Like-for-like slot comparisons</li>
+          <li>Minimum 30 peer reads required</li>
+          <li>Zero ungrounded noise</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="card-banner" style="background:#F1F5F9; color:#0F172A;">INVESTIGATE</span>
+        <h4>AI-Assisted Dossier</h4>
+        <p>Automatically pre-assembles peer history, read continuity, meter diagnostic status, and customer billing markers into an explainable case summary.</p>
+        <ul class="bullet-list" style="margin-top:auto;">
+          <li>Instant contextual assembly</li>
+          <li>Deterministic reasoning rules</li>
+          <li>Identifies missing data explicitly</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="card-banner badge-emerald">RESOLVE</span>
+        <h4>Human-in-the-Loop</h4>
+        <p>Associates review enriched evidence, confirm root cause, and dispatch field actions or billing adjustments with full audit history retained.</p>
+        <ul class="bullet-list" style="margin-top:auto;">
+          <li>Associate owns final decision</li>
+          <li>Complete audit trail retained</li>
+          <li>Seamless CRM/ERP handoff</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>Meter Intelligence Platform</span>
+      <span>Slide 04 of 10</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 5 -->
+  <div class="slide">
+    <div class="slide-tag">04 / Enterprise Architecture & Governance</div>
+    <div class="slide-title">Governed, Secure, and Audit-Ready from Day One</div>
+    <div class="slide-subtitle">Clear separation between system evidence, automated reasoning, and associate-owned resolution.</div>
+    <div style="display:flex; gap:10px; margin-bottom: 16px;">
+      <div style="flex:1; background:var(--primary-light); border:1px solid #BFDBFE; padding:9px 12px; border-radius:6px;">
+        <b style="font-size:11px; color:var(--primary-dark);">1. INGEST</b>
+        <div style="font-size:9.5px; color:var(--text-muted); margin-top:2px;">4h meter telemetry</div>
+      </div>
+      <div style="flex:1; background:var(--primary-light); border:1px solid #BFDBFE; padding:9px 12px; border-radius:6px;">
+        <b style="font-size:11px; color:var(--primary-dark);">2. SCREEN</b>
+        <div style="font-size:9.5px; color:var(--text-muted); margin-top:2px;">3σ peer-slot baseline</div>
+      </div>
+      <div style="flex:1; background:var(--primary-light); border:1px solid #BFDBFE; padding:9px 12px; border-radius:6px;">
+        <b style="font-size:11px; color:var(--primary-dark);">3. ENRICH</b>
+        <div style="font-size:9.5px; color:var(--text-muted); margin-top:2px;">Billing & meter status</div>
+      </div>
+      <div style="flex:1; background:var(--primary-light); border:1px solid #BFDBFE; padding:9px 12px; border-radius:6px;">
+        <b style="font-size:11px; color:var(--primary-dark);">4. PRESENT</b>
+        <div style="font-size:9.5px; color:var(--text-muted); margin-top:2px;">Unified case dossier</div>
+      </div>
+      <div style="flex:1; background:var(--emerald-light); border:1px solid #A7F3D0; padding:9px 12px; border-radius:6px;">
+        <b style="font-size:11px; color:var(--emerald);">5. RESOLVE</b>
+        <div style="font-size:9.5px; color:var(--text-muted); margin-top:2px;">Associate sign-off</div>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="card" style="border-left: 4px solid var(--primary);">
+        <h4>No Black-Box Hallucinations</h4>
+        <p>Rules are strictly data-grounded and version-controlled. If a data source is missing, the system explicitly reports 'needs-data' rather than asserting unverified causes.</p>
+      </div>
+      <div class="card" style="border-left: 4px solid var(--text-dark);">
+        <h4>Immutable Audit Trail</h4>
+        <p>Raw meter telemetry, system calculations, and associate notes remain strictly partitioned. Every status update, override, and disposition is logged for compliance.</p>
+      </div>
+      <div class="card" style="border-left: 4px solid var(--emerald);">
+        <h4>Enterprise Security</h4>
+        <p>Built with enterprise security in mind: Row-Level Security (RLS), server-side protected credentials, and feature-gated write workflows.</p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>Meter Intelligence Platform</span>
+      <span>Slide 05 of 10</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 6 -->
+  <div class="slide">
+    <div class="slide-tag">05 / Quantified Business Value</div>
+    <div class="slide-title">Measurable ROI: Labor Optimization, Field Savings & Revenue Protection</div>
+    <div class="slide-subtitle">Tangible capacity returned to operations and substantial hard cost avoidance.</div>
+    <div class="grid-4">
+      <div class="card">
+        <div class="stat-number">333 HRS</div>
+        <div class="stat-label">Labor Returned / 1k Cases</div>
+        <p>20 mins saved per anomaly review (from 30m to 10m).</p>
+      </div>
+      <div class="card">
+        <div class="stat-number" style="color:var(--text-dark);">~2.0 FTE</div>
+        <div class="stat-label">Capacity Unlocked</div>
+        <p>Equivalent to 2 dedicated analysts freed per 10k alerts handled.</p>
+      </div>
+      <div class="card">
+        <div class="stat-number" style="color:var(--emerald);">15%–25%</div>
+        <div class="stat-label">Avoided Truck Rolls</div>
+        <p>Pre-validation prevents unnecessary dispatches ($150–$250/trip).</p>
+      </div>
+      <div class="card">
+        <div class="stat-number">< 24 HRS</div>
+        <div class="stat-label">Faster Dispute Cycle</div>
+        <p>Resolves billing friction before monthly customer invoices generate.</p>
+      </div>
+    </div>
+    <div class="card" style="background:var(--card-bg);">
+      <h4 style="color:var(--primary); font-size:12px; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:8px;">Executive Value Framework: Three Levers of Impact</h4>
+      <div style="font-size:11.5px; color:var(--text-muted); line-height:1.6;">
+        <div><b>1. Direct Labor Savings:</b> Automated evidence aggregation reduces investigative drag by 66%, allowing existing teams to absorb smart meter expansion without hiring.</div>
+        <div><b>2. Fleet Cost Avoidance:</b> Filtering false alarms stops unnecessary truck rolls. Eliminating just 100 unwarranted field visits recovers $18,000–$25,000 in direct fleet expenses.</div>
+        <div><b>3. Revenue Protection:</b> Rapid identification of under-registering meters prevents revenue leakage while averting high-conflict customer billing disputes.</div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>Meter Intelligence Platform</span>
+      <span>Slide 06 of 10</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 7 -->
+  <div class="slide">
+    <div class="slide-tag">06 / Operational User Experience</div>
+    <div class="slide-title">What the Operations Team Sees: The Unified Case Dossier</div>
+    <div class="slide-subtitle">Replacing 5 disconnected systems with one clear, evidence-rich decision screen.</div>
+    <div class="grid-2">
+      <div class="card" style="border: 1px solid #BFDBFE;">
+        <div style="background:var(--primary-light); padding:8px 12px; border-radius:5px; font-weight:700; color:var(--primary-dark); font-size:11.5px; margin-bottom:10px;">
+          CASE SUMMARY: MTR-9824 • USAGE SPIKE (+4.2σ)
+        </div>
+        <div style="font-size:11.5px; line-height:1.6; color:var(--text-dark);">
+          <div style="margin-bottom:6px;"><b>Statistical Trigger:</b> Observed 18.4 kWh @ 16:00 vs 4.2 kWh baseline (Threshold: 11.8 kWh).</div>
+          <div style="margin-bottom:6px;"><b>Read Continuity:</b> <span style="color:var(--emerald); font-weight:600;">PASS</span> — 273 consecutive days unbroken data.</div>
+          <div style="margin-bottom:6px;"><b>Meter Diagnostics:</b> <span style="color:var(--emerald); font-weight:600;">ACTIVE</span> — Zero tamper or low-battery error flags.</div>
+          <div style="margin-bottom:6px;"><b>Billing Context:</b> Consistent with past tariff bracket; previous invoices paid on time.</div>
+          <div style="margin-top:10px; padding:8px; background:var(--card-alt); border-radius:5px; font-size:11px;">
+            <b>Recommended Next Action:</b> Contact account to confirm recent HVAC/equipment additions prior to booking field service.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h4 style="color:var(--primary); font-size:12.5px; text-transform:uppercase; margin-bottom:10px;">Operational Lift for Analysts</h4>
+        <ul class="bullet-list" style="line-height:1.65;">
+          <li><b>Single-Pane-of-Glass:</b> No more switching between AMI, billing databases, and CRM portals. All context is pre-fetched and packaged.</li>
+          <li><b>Prescriptive Guidance:</b> The platform surfaces recommended next checks, enabling newer associates to execute with senior-level accuracy.</li>
+          <li><b>Full Associate Ownership:</b> Associate owns the disposition: Validate, Dispatch Field Tech, Adjust Billing, or Mark Inconclusive.</li>
+          <li><b>Structured Collaboration:</b> Notes and comments remain attached to case history, ensuring continuous institutional learning.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>Meter Intelligence Platform</span>
+      <span>Slide 07 of 10</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 8 -->
+  <div class="slide">
+    <div class="slide-tag">07 / Pilot Scorecard</div>
+    <div class="slide-title">Targeted KPIs to Validate Lift During 90-Day Pilot</div>
+    <div class="slide-subtitle">Rigorous measurement against a baseline cohort before full fleet deployment.</div>
+    <div class="grid-4" style="height: calc(100% - 110px); margin-bottom: 0;">
+      <div class="card" style="justify-content: flex-start;">
+        <span class="card-banner badge-primary">TRIAGE SPEED</span>
+        <div class="stat-number" style="color:var(--emerald); margin-top:8px;">< 10 MIN</div>
+        <div class="stat-label">Baseline: 30 mins</div>
+        <p style="margin-top:8px;">Reduction of ~66% in analyst handling time per investigated anomaly.</p>
+      </div>
+      <div class="card" style="justify-content: flex-start;">
+        <span class="card-banner badge-primary">PRECISION RATE</span>
+        <div class="stat-number" style="color:var(--emerald); margin-top:8px;">> 85%</div>
+        <div class="stat-label">Candidate Actionability</div>
+        <p style="margin-top:8px;">% of flagged candidates verified as true, actionable operational events.</p>
+      </div>
+      <div class="card" style="justify-content: flex-start;">
+        <span class="card-banner badge-primary">AVOIDED TRUCKS</span>
+        <div class="stat-number" style="color:var(--emerald); margin-top:8px;">20%–30%</div>
+        <div class="stat-label">Dispatch Reduction</div>
+        <p style="margin-top:8px;">Reduction in unnecessary field dispatches achieved via pre-investigation.</p>
+      </div>
+      <div class="card" style="justify-content: flex-start;">
+        <span class="card-banner badge-primary">FIRST TOUCH</span>
+        <div class="stat-number" style="color:var(--emerald); margin-top:8px;">> 75%</div>
+        <div class="stat-label">Single-Review Close</div>
+        <p style="margin-top:8px;">Cases resolved on first review without reopening or secondary escalation.</p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>Meter Intelligence Platform</span>
+      <span>Slide 08 of 10</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 9 -->
+  <div class="slide">
+    <div class="slide-tag">08 / Implementation Roadmap</div>
+    <div class="slide-title">A De-Risked, Staged Rollout Strategy</div>
+    <div class="slide-subtitle">Structured milestones ensuring operational stability, user adoption, and verified economics.</div>
+    <div class="grid-3">
+      <div class="card">
+        <span class="card-banner badge-primary">PHASE 1: HARDEN & CONNECT</span>
+        <h4>Weeks 1 – 4</h4>
+        <ul class="bullet-list" style="margin-top: 10px;">
+          <li>Connect live AMI telemetry & billing feeds</li>
+          <li>Configure enterprise SSO & Row-Level Security</li>
+          <li>Establish pre-pilot operational baselines</li>
+          <li>Deliver 2-hour associate training workshop</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="card-banner badge-amber">PHASE 2: 90-DAY PILOT</span>
+        <h4>Weeks 5 – 16</h4>
+        <ul class="bullet-list" style="margin-top: 10px;">
+          <li>Deploy with a cohort of 5–8 operations analysts</li>
+          <li>Run parallel comparison against standard triage</li>
+          <li>Capture override rates and truck roll savings</li>
+          <li>Weekly sprint check-ins with operations leads</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="card-banner badge-emerald">PHASE 3: ENTERPRISE SCALE</span>
+        <h4>Weeks 17+</h4>
+        <ul class="bullet-list" style="margin-top: 10px;">
+          <li>Roll out across full utility meter footprint</li>
+          <li>Automate bidirectional ERP/CRM work orders</li>
+          <li>Integrate weather & grid telemetry feeds</li>
+          <li>Transition to continuous SLA tracking</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>Meter Intelligence Platform</span>
+      <span>Slide 09 of 10</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 10 -->
+  <div class="slide">
+    <div class="slide-tag">09 / Executive Decision & Next Steps</div>
+    <div class="slide-title">Decision Request: Sponsor the 90-Day Operational Pilot</div>
+    <div class="slide-subtitle">Clear mandate, defined resource commitments, and zero operational disruption.</div>
+    <div class="grid-2">
+      <div class="card">
+        <h4 style="color:var(--primary); font-size:12px; text-transform:uppercase; margin-bottom:10px;">The Decision Ask</h4>
+        <ul class="bullet-list" style="line-height:1.6;">
+          <li><b>Sponsor a 90-Day Pilot Cohort:</b> Authorize a controlled pilot with 5–8 operations analysts focusing on a designated smart meter district.</li>
+          <li><b>Approve Data Access Connections:</b> Grant read-only API access to AMI telemetry, CIS billing markers, and existing ticketing.</li>
+          <li><b>Designate an Operations Lead:</b> Appoint a single operational point-of-contact to review bi-weekly progress and validate scorecard metrics.</li>
+          <li><b>Zero Disruption Guarantee:</b> The platform runs in parallel with existing ticketing; current workflows remain intact until benchmarks are proven.</li>
+        </ul>
+      </div>
+      <div class="card" style="background:var(--primary-light); border:1px solid #BFDBFE;">
+        <h4 style="color:var(--primary-dark); font-size:12.5px; text-transform:uppercase; margin-bottom:10px;">Why Approve Today?</h4>
+        <ul class="bullet-list" style="line-height:1.65; color:var(--text-dark);">
+          <li><b>Immediate Capacity Lift:</b> Relieve front-line alert fatigue and recapture up to 333 hours per 1,000 cases.</li>
+          <li><b>Direct Fleet Cost Avoidance:</b> Curtail unwarranted field dispatches ($150–$250/truck roll) and stop revenue leakage.</li>
+          <li><b>Auditable Governance:</b> Deliver compliant, human-supervised AI with zero hallucination exposure and complete audit transparency.</li>
+          <li><b>Low-Risk Validation:</b> Full pilot validation without replacing legacy systems or risking customer operations.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>Meter Intelligence Platform</span>
+      <span>Slide 10 of 10</span>
+    </div>
+  </div>
+
+</body>
+</html>
