@@ -1,0 +1,34 @@
+# Environment variables and API keys
+.env
+*.env.local
+
+# Python & Virtual Environments
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.sqlite3
+*.db
+claimassure.db
+
+# Node & Frontend
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+build/
+.npm
+npm-debug.log*
+
+# Uploads and temporary files
+backend/uploads/
+uploads/
+*.log
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
